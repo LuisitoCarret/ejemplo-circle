@@ -6,12 +6,11 @@ jobs:
       - image: cimg/node:18.20
     steps:
       - checkout
-      - run: npm ci
-      - run: node app.js
-      - run: npm test
+      - run: npm ci || npm install   
+      - run: node app.js            
+      - run: npm test               
 
 workflows:
-  version: 2
-  build_and_test:
+  build:
     jobs:
       - build
