@@ -5,10 +5,9 @@ jobs:
       - image: cimg/node:16.19
     steps:
       - checkout
-      - run: npm install
-      - run: node app.js       
-      - run: npm test     
-
+      - run: npm install             
+      - run: node app.js      
+      - run: npm test               
 workflows:
   version: 2
   build_and_test:
